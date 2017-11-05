@@ -20,6 +20,8 @@ def get_json_from_url(url):
 
 def get_updates():
     url = URL + 'getUpdates'
+        if offset:
+            url += '?offset={}'.format(offset)
     js = get_json_from_url(url)
     return js
 
